@@ -38,7 +38,7 @@ The system is organized into separate ROS 2 nodes to make its perception, planni
 
 ## System Architecture
 
-'''text
+```text
              Gazebo Museum World
                      |
                      v
@@ -84,13 +84,13 @@ The system is organized into separate ROS 2 nodes to make its perception, planni
                      v
                    RViz2
 
-''' 
+```
 
 
 
 ## Project Structure
 
-'''text
+```text
 
 museum_guide/
 ├── config/
@@ -125,7 +125,7 @@ museum_guide/
 ├── setup.py
 └── README.md
 
-'''
+```
 ## Installation
 # Prerequisites
 
@@ -159,19 +159,22 @@ Launch the complete simulation:
 ros2 launch museum_guide bringup.launch.py
 
 The launch system starts the Gazebo simulation, spawns the robot, establishes the configured Gazebo-to-ROS bridges, starts robot state publishing, opens RViz2, and launches the perception, planning, control, and odometry nodes.
+
 The robot reacts to obstacle distances using its configured reactive navigation logic.
 ROS 2 Topics
-Topic	Message type	Purpose
-/scan	sensor_msgs/msg/LaserScan	LiDAR measurements
-/front_distance	std_msgs/msg/Float32	Closest valid obstacle distance in the front sector
-/left_distance	std_msgs/msg/Float32	Closest valid obstacle distance in the left sector
-/right_distance	std_msgs/msg/Float32	Closest valid obstacle distance in the right sector
-/back_distance	std_msgs/msg/Float32	Closest valid obstacle distance in the rear sector
-/drive_cmd	std_msgs/msg/String	Planner decision
-/cmd_vel	geometry_msgs/msg/Twist	Robot velocity commands
-/perception/markers	visualization_msgs/msg/MarkerArray	Perception-window visualization
-/planner/markers	visualization_msgs/msg/MarkerArray	Planner-decision visualization
-/odom	nav_msgs/msg/Odometry	Robot odometry
+
+| Topic | Message Type | Purpose |
+|---|---|---|
+| `/scan` | `sensor_msgs/msg/LaserScan` | LiDAR measurements |
+| `/front_distance` | `std_msgs/msg/Float32` | Closest obstacle in front |
+| `/left_distance` | `std_msgs/msg/Float32` | Closest obstacle on the left |
+| `/right_distance` | `std_msgs/msg/Float32` | Closest obstacle on the right |
+| `/back_distance` | `std_msgs/msg/Float32` | Closest obstacle behind |
+| `/drive_cmd` | `std_msgs/msg/String` | Planner decision |
+| `/cmd_vel` | `geometry_msgs/msg/Twist` | Robot velocity commands |
+| `/perception/markers` | `visualization_msgs/msg/MarkerArray` | Perception-window visualization |
+| `/planner/markers` | `visualization_msgs/msg/MarkerArray` | Planner-decision visualization |
+| `/odom` | `nav_msgs/msg/Odometry` | Robot odometry |
 
 
 Navigation Logic
