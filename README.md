@@ -154,6 +154,18 @@ rosdep install --from-paths src --ignore-src -r -y
 colcon build --packages-select museum_guide
 source install/setup.bash
 
+## Demonstration
+
+This video demonstrates how to launch the Museum Explorer simulation in Gazebo and configure RViz2 to visualize the robot, LiDAR data, and perception/planner markers.
+
+[![Museum Explorer Robot Demonstration](https://img.youtube.com/vi/0qdvCkxjhLQ/maxresdefault.jpg)](https://youtu.be/0qdvCkxjhLQ)
+
+*Click the preview above to watch the full demonstration.*
+
+## Simulation Preview
+
+![Museum Explorer simulation](docs/images/museum-explorer.png)
+
 Running the Simulation
 Launch the complete simulation:
 ros2 launch museum_guide bringup.launch.py
