@@ -1,0 +1,4 @@
+/planner:
+  ros__parameters:
+    stop_distance: 2.0
+    

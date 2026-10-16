@@ -1,0 +1,8 @@
+/planner:
+  ros__parameters:
+    stop_distance: 1.0
+
+/controller:
+  ros__parameters:
+    forward_speed: 0.2
+    turn_speed: 0.785 # math.pi / 4

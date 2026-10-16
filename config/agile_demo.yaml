@@ -1,0 +1,4 @@
+/controller:
+  ros__parameters:
+    forward_speed: 0.5
+    turn_speed: 1.57
