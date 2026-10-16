@@ -203,11 +203,15 @@ ros2 launch museum_guide nodes.launch.py \
   params_file:=/absolute/path/to/config/cautious_tour.yaml
 
 Replace the path with the location of the desired YAML file.
+
+
 Current Limitations
 - Navigation is based on local obstacle distances rather than a global map or planned route.
 - The planner uses a small set of discrete movement decisions.
 - There is no visitor interaction or destination-based tour guidance.
 - Navigation performance depends on sensor measurements, parameter choices, and the simulated environment.
+
+
 Future Improvements
 - Add waypoint-based navigation.
 - Integrate SLAM and map-based navigation.
@@ -215,9 +219,8 @@ Future Improvements
 - Add a visitor-facing interface for selecting destinations.
 - Evaluate navigation performance using repeatable simulation scenarios.
 - Add automated tests and demonstration videos.
-License
+
+
+# License
 This project is licensed under the MIT License. See LICENSE for details.
 EOF
-
-
-You should see the project title and overview.
