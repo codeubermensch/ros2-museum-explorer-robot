@@ -38,7 +38,7 @@ The system is organized into separate ROS 2 nodes to make its perception, planni
 
 ## System Architecture
 
-'
+'''text
              Gazebo Museum World
                      |
                      v
@@ -84,8 +84,13 @@ The system is organized into separate ROS 2 nodes to make its perception, planni
                      v
                    RViz2
 
+''' 
+
+
 
 ## Project Structure
+
+'''text
 
 museum_guide/
 ├── config/
@@ -120,6 +125,7 @@ museum_guide/
 ├── setup.py
 └── README.md
 
+'''
 ## Installation
 # Prerequisites
 
