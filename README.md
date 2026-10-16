@@ -38,7 +38,7 @@ The system is organized into separate ROS 2 nodes to make its perception, planni
 
 ## System Architecture
 
-```text
+'
              Gazebo Museum World
                      |
                      v
